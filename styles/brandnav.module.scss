@@ -1,4 +1,9 @@
+@import './variables.scss';
+
 .brandNavContainer {
+    display: flex;
+    justify-content: space-between;
+
     .logo {
         background-image: url('../public/images/logo-inverted.png');
         background-size: contain;
@@ -6,5 +11,28 @@
         height: 20px;
         width: 200px;
         margin: 20px 50px;
+    }
+    
+    .githubContainer {
+        margin: 20px 50px;
+        position: relative;
+
+        a {
+            color: $theme-dark-grey;
+            text-decoration: none;
+            font-weight: bold;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                width: 35px;
+                height: 35px;
+                background: url('../public/images/github-mark.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                left: -45px;
+                top: -8px;
+            }
+        }
     }
 }

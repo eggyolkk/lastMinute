@@ -1,28 +1,84 @@
+@import './variables.scss';
+
 .homepageContainer {
-    width: 100vw;
-    height: calc(100vh - 50px);
-    min-height: 900px;
+    width: 100%;
+    height: calc(100vh - 61px);
+    min-height: 800px;
     background: url('../public/images/homepage-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-
+    flex-wrap: wrap;
 
     .leftContainer {
         display: flex;
-        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         padding: 0 100px;
+        width: 45%;
+
+        @media only screen and (max-width: $max-screen-md) {
+            width: 100%;
+            padding: 130px 40px 40px 40px;
+            justify-content: normal;
+        }
 
         .logo {
             background-image: url('../public/images/logo.png');
             background-size: contain;
             background-repeat: no-repeat;
-            height: 200px;
-            width: 500px;
+            height: 110px;
+            width: 100%;
+
+            @media only screen and (max-width: $max-screen-md) {
+                height: 0;
+                padding-top: 50px;
+            }
         }
 
         p {
             color: white;
+            font-size: 24px;
+            margin: 5px 0;
+
+            @media only screen and (max-width: $max-screen-md) {
+                font-size: 20px;
+            }
+        }
+
+        button {
+            border: 0;
+            padding: 20px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 20px;
+            max-width: 600px;
+            cursor: pointer;
+
+            @media only screen and (max-width: $max-screen-md) {
+                font-size: 18px;
+            }
+
+            &.createEventButton {
+                background: $theme-light-grey;
+                margin: 30px 0 15px 0;
+
+                &:hover {
+                    background: $theme-dark-grey;
+                    color: $theme-light-grey;
+                    transition: background-color 0.1s linear;
+                }
+            }
+
+            &.hasInviteButton {
+                background: #f3f3f347;
+                color: white;
+
+                &:hover {
+                    background: black;
+                    transition: background-color 0.1s linear;
+                }
+            }
         }
     }
     

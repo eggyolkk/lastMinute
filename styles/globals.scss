@@ -1,3 +1,26 @@
+// Typography
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../public/fonts/DM_Sans/DMSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../public/fonts/DM_Sans/DMSans-Medium.ttf');
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../public/fonts/DM_Sans/DMSans-Bold.ttf');
+}
+
 body {
     margin: 0;
+    * {
+        font-family: 'DM Sans';
+    }
 }
