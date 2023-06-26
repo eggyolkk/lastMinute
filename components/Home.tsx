@@ -1,23 +1,26 @@
 
 import styles from '../styles/home.module.scss';
+import Link from 'next/link';
 
 const Home = () => {
     return (
         <div className={styles.homepageContainer}>
             <div className={styles.leftContainer}>
                 <div className={styles.logo}></div>
-                <p>Make planning with your friends easy.</p>
+                <p>Make planning easy.</p>
 
-                <button 
+                <Link 
                     className={styles.createEventButton}
+                    href='create-event'
                 >
                     Create new event
-                </button>
-                <button 
+                </Link>
+                <Link 
                     className={styles.hasInviteButton}
+                    href='/'
                 >
                     I have an invite link
-                </button>
+                </Link>
             </div>
         </div>
     )

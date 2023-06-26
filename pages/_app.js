@@ -1,12 +1,11 @@
 import { BrandNav } from "../components/BrandNav";
-import { Home } from "../components/Home";
 import '../styles/globals.scss';
 
-const App = () => {
+const App = ({ Component, pageProps }) => {
     return (
         <>
             <BrandNav />
-            <Home />
+            <Component {...pageProps} />
         </>
     )
 }

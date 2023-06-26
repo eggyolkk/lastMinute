@@ -11,11 +11,20 @@
         height: 20px;
         width: 200px;
         margin: 20px 50px;
+
+        @media only screen and (max-width: 430px) {
+            height: 15px;
+            margin: 15px 50px;
+        }
     }
     
     .githubContainer {
         margin: 20px 50px;
         position: relative;
+
+        @media screen and (max-width: 430px) {
+            margin: 15px 50px;
+        }
 
         a {
             color: $theme-dark-grey;
@@ -32,6 +41,13 @@
                 background-repeat: no-repeat;
                 left: -45px;
                 top: -8px;
+
+                @media screen and (max-width: 430px) {
+                    height: 25px;
+                    width: 25px;
+                    top: -4px;
+                    left: -30px;
+                }
             }
         }
     }
